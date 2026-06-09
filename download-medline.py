@@ -2,7 +2,6 @@ import sys,os
 import json
 import glob
 import subprocess
-import util
 
 
 def main():

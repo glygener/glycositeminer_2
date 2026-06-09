@@ -1,0 +1,226 @@
+Step-1: Make data directories
+=============================
+Choose path where glycositeminer data will be stored
+e.g /data/glycositeminer/	
+
+	$ mkdir -p /data/glycositeminer/v-1.0
+	$ rm rootdir
+	$ rm reldir
+	$ rm miscdir
+	$ ln -s /data/glycositeminer rootdir
+	$ ln -s /data/glycositeminer/v-1.0 reldir
+	$ ln -s /data/glycositeminer/misc miscdir
+
+
+Step-2: Data download
+=====================
+	The following download scripts will download data and place it under
+	reldir/glygen/, reldir/medline_xml/, reldir/pubtator_downloads/
+	and reldir/gene_info/. This assumes that all protein datasets have been
+	created under /data/projects/glygen/generated/datasets/unreviewed/
+
+	The download-medline.py script depends on the file conf/medline.json which needs
+	to be edited. To adjust the values for the "baseline" section, go to 
+	https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/ and see the indexes of the 
+	first and last pubmed*.xml.gz files. For example, if the first and last files are
+	"pubmed25n0001.xml.gz" and "pubmed25n1274.xml.gz", then the base line section
+	in conf/medline.json should be:
+	{
+		"baseline":{
+			"url":"https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/",
+			"start":1,
+			"end":1274,
+     	 	"year":26
+		}
+	}
+	The "updatefiles" section should be updated in the same manner by going to 
+	https://ftp.ncbi.nlm.nih.gov/pubmed/updatefiles/
+	
+
+	$ python3 download-glygen.py
+	$ python3 download-medline.py	
+	$ python3 download-pubtator.py
+	$ python3 download-gene-info.py
+
+
+
+Step-3: Dump known sites
+========================
+	The following script creates reldir/glygen/known_sites.csv which
+	contains known glycosylation sites assuming *_proteoform_glycosylation_sites_*.csv 
+	datasets are created under /data/projects/glygen/generated/datasets/unreviewed/
+
+	$ python3 extract-known-sites.py
+
+
+Step-4: Processing medline download
+===================================
+	This is a wrapper around extract-medline-data.py which use NER model
+	to find abstracts from xml files under reldir/medline_xml/
+	that contain site and glyco entities
+	  		
+	$ python3 wrap-extract-medline-data.py
+	
+	- input
+			reldir/medline_xml/*
+			miscdir/glyco.json
+	- output
+			reldir/medline_extracts/*
+			reldir/medline_abstracts/*
+			logs/medline_abstracts.%s.%s.log
+			
+
+
+
+Step-5: Processing pubtator download
+====================================
+	$ python3 extract-pubtator-data.py
+   - input
+      	reldir/pubtator_downloads/bioconcepts2pubtatorcentral.offset.gz
+   - output
+         reldir/pubtator_extracts/*
+         logs/pubtator_extracts.log
+
+
+
+Step-6: Making LLM API calls
+============================
+   - description
+      uses openai.com API to extract species, gene, site entities from
+      abstracts in reldir/medline_abstracts/ and writes out entities JSON
+      files under reldir/llm_entities/$BATCH/ where $BATCH is batch index (1, 2, 3).
+      You can run this for more than one batches if you think the LLM output will 
+		vary.
+   - script
+      python3 generate-llm-entities.py  -b $BATCH
+   - input
+         reldir/medline_abstracts/*
+   - output
+         reldir/llm_entities/$BATCH/llm.*.json
+
+
+Step-7: Making entities
+=======================
+   - script
+         make-entities.py
+   - input
+         reldir/medline_extracts/*.json
+			reldir/pubtator_extracts/*.json
+			reldir/glygen/*names*.csv
+			reldir/glygen/*genelocus*.csv
+			reldir/glygen/*geneid*.csv
+			reldir/llm_entities/*/*.json
+   		reldir/misc/aa.csv
+			reldir/misc/known_sites.csv
+	- output
+         reldir/entities/site.*.json
+			reldir/entities/glyco.*.json
+			reldir/entities/species.*.json
+			reldir/entities/gene.*.json
+			reldir/entities/extragene.*.json
+
+
+Step-8: Integrate entities
+==========================
+   - script
+         integrate-entities.py
+   - input
+         reldir/entities/site.*.json
+         reldir/entities/glyco.*.json
+         reldir/entities/species.*.json
+         reldir/entities/gene.*.json
+         reldir/entities/extragene.*.json
+   		reldir/gene_info/All_Data.gene_info
+			reldir/misc/canon_map.csv 
+			reldir/misc/species_map.json
+	- output
+         reldir/integrated/site.*.json
+
+
+Step-9: Making match sites
+==========================
+   - script
+         make-match-sites.py
+   - input
+         reldir/integrated/site.*.json
+         reldir/misc/known_sites.csv
+         reldir/glygen/*_protein_canonicalsequences.fasta
+			reldir/misc/species_map.json
+			reldir/misc/aa.csv
+			reldir/misc/glyco_aa_list.json
+   - output
+         reldir/match_sites/match_sites.csv
+			reldir/match_sites/mismatch_sites.csv
+
+
+Step-10: Making samples/features
+================================
+   - script
+         make-samples.py
+   - input
+         reldir/match_sites/sites.csv
+   		reldir/glygen/*_protein_canonicalsequences.fasta
+			reldir/misc/species_map.json
+			reldir/pubtator_entities/species.*.json
+	- output
+         reldir/samples/samples_labeled.csv
+			reldir/samples/samples_all.csv
+
+
+Step-11: Making predicdtions
+============================
+	- script
+	  		make-predictions.py 
+	- input
+			reldir/samples/samples_all.csv
+			reldir/glygen/*_protein_canonicalsequences.fasta
+         reldir/misc/known_sites.csv
+			reldir/misc/aa.csv
+			reldir/misc/species_map.json
+	- output
+			reldir/predicted/predicted_tmp.csv
+			reldir/predicted/stats.txt
+
+
+Step-12: Generating LLM confirmations
+=====================================
+	- script
+		generate-llm-confirmation.py
+	- input
+			reldir/predicted/predicted_tmp.csv
+  	- output
+		reldir/confirmations/*.json
+
+
+Step-13: Updating predicdtions
+==============================
+   - script
+         update-predictions.py
+   - input
+         reldir/predicted/predicted_tmp.csv
+         reldir/confirmations/*.json
+   - output
+        	reldir/predicted/predicted.csv
+
+
+Step-14: Correcting for species mismatch
+========================================
+   - script
+         correct-predictions.py
+   - input
+         reldir/predicted/predicted.csv
+         reldir/llm_entities/*/*.json
+   - output
+         reldir/predicted/predicted_corrected.csv
+
+
+Step-15: Copy to GlyGen downloads folder
+========================================
+	$ mkdir /data/shared/glygen/downloads/lit_min/YYYY_MM_DD
+	$ cp reldir/predicted/predicted_corrected.csv /data/shared/glygen/downloads/lit_min/YYYY_MM_DD/glycosylation_sites_GlycoSiteMiner_$REL.csv
+	$ cd /data/shared/glygen/downloads/lit_min/
+	$ chmod -R 775 YYYY_MM_DD
+	$ rm current
+	$ ln -s YYYY_MM_DD current
+
+

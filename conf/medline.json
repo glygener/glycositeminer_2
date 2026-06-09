@@ -1,0 +1,14 @@
+{
+	"baseline":{
+		"url":"https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/",
+		"start":1,
+		"end":1334,
+      "year":26
+	},
+	"updatefiles":{
+		"url":"https://ftp.ncbi.nlm.nih.gov/pubmed/updatefiles/",
+		"start":1335,
+		"end":1355,
+		"year":26
+	}
+}

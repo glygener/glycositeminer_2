@@ -1,0 +1,51 @@
+{
+	"mode":"dev",
+	"rel_dir":"/data/",
+	"gene_info":{
+		"Mammalia":[
+        	"Bos_taurus.gene_info.gz",
+        	"Homo_sapiens.gene_info.gz",
+        	"Mus_musculus.gene_info.gz",
+        	"Rattus_norvegicus.gene_info.gz",
+        	"Sus_scrofa.gene_info.gz"
+		],
+		"Fungi":[
+        	"Saccharomyces_cerevisiae.gene_info.gz"
+		],
+		"Plants":[
+        	"Arabidopsis_thaliana.gene_info.gz"
+		]
+	},
+	"llm":{
+		"api_key":"sk-proj-...",
+		"model":"gpt-4o-mini",
+		"role":"assistant",
+		"query": "give me gene entity, protein entity, glycosylation sites, tissue, cell line and organism only using information provided in the following text",
+		"schema":{
+    		"type": "object",
+    		"properties": {
+        		"glycosylation_sites": {
+            	"type": "array",
+            	"items": {
+                	"type": "object",
+                	"properties": {
+                    	"glycosylation_site": {"type": "string"},
+                    	"gene_entity": {"type": "string"},
+                    	"protein_entity": {"type": "string"},
+							"organism": {"type": "string"},
+                    	"tissue": {"type": "string"},
+                    	"cell_line": {"type": "string"}
+                	},
+                	"required": ["glycosylation_site", "gene_entity"],
+                	"additionalProperties": false
+            	}
+        		}
+    		},
+    		"required": ["glycosylation_sites"],
+    		"additionalProperties": false
+		}
+	}
+}
+
+
+

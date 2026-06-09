@@ -32,8 +32,8 @@ def main():
             out_file_one = xml_folder + "/" + file_name
             #cmd = "wget %s%s -O %s" % (ftp_url, file_name, out_file_one)
             cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file_one)
-            #x = subprocess.getoutput(cmd)
-            #print (cmd)
+            print (cmd)
+            x = subprocess.getoutput(cmd)
 
     cmd = "chmod -R 777 " + xml_folder
     x = subprocess.getoutput(cmd)

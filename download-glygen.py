@@ -9,13 +9,11 @@ def main():
 
     global config_obj
     config_obj = json.loads(open("conf/config.json", "r").read())
-    if config_obj["mode"] == "dev":
-        config_obj["rel_dir"], config_obj["misc_dir"] = "reldir/", "miscdir/"
 
     source = "glygen"
     # create dir if doesn't exist    
-    if os.path.isdir(config_obj["rel_dir"] + source) == False:
-        cmd = "mkdir -p " + config_obj["rel_dir"] + source
+    if os.path.isdir(config_obj["data_dir"] + source) == False:
+        cmd = "mkdir -p " + config_obj["data_dir"] + source
         x = subprocess.getoutput(cmd)
 
     ds_list = [
@@ -31,8 +29,10 @@ def main():
 
     glygen_dir = "/data/projects/glygen/generated/"
 
-    out_file = config_obj["rel_dir"] + "glygen/species_info.csv"
-    cmd = "cp /data/projects/glygen/generated/misc/species_info.csv %s" % (out_file)
+    glygen_rel = config_obj["glygen_rel"] 
+    out_file = config_obj["data_dir"] + "glygen/species_info.csv"
+    ftp_url = "https://data.glygen.org/ln2releases/data/v-%s/misc/species_info.csv" % (glygen_rel)
+    cmd = "curl %s -o %s" % (ftp_url, out_file)
     x = subprocess.getoutput(cmd)
     sp_list = []
     with open (out_file, "r") as FR:
@@ -42,16 +42,17 @@ def main():
                 sp_list.append(row[1])
 
 
+    ftp_url = "https://data.glygen.org/ln2releases/data/v-%s/reviewed/" % (glygen_rel)
     for ds in ds_list:
         for sp in sp_list:
             file_name = "%s_protein_%s" % (sp, ds)
-            out_file = config_obj["rel_dir"] + "glygen/%s" % (file_name) 
-            cmd = "cp /data/projects/glygen/generated/datasets/unreviewed/%s reldir/glygen/" % (file_name)
+            out_file = config_obj["data_dir"] + "glygen/%s" % (file_name) 
+            cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
             x = subprocess.getoutput(cmd)
+            cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
             #print (cmd)
     
-
-    cmd = "chmod -R 777 " + config_obj["rel_dir"] + "/" + source
+    cmd = "chmod -R 777 " + config_obj["data_dir"] + "/" + source
     x = subprocess.getoutput(cmd)
 
 

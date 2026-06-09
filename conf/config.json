@@ -1,6 +1,6 @@
 {
-	"mode":"dev",
-	"rel_dir":"/data/",
+	"data_dir":"/local/tmp/",
+	"glygen_rel":"2.11.1",
 	"gene_info":{
 		"Mammalia":[
         	"Bos_taurus.gene_info.gz",

@@ -2,16 +2,13 @@ import sys,os
 import json
 import glob
 import subprocess
-from optparse import OptionParser
+import util
 
 
 def main():
 
     global config_obj
     config_obj = json.loads(open("conf/config.json", "r").read())
-    if config_obj["mode"] == "dev":
-        config_obj["data_dir"], config_obj["misc_dir"] = "reldir/", "miscdir/"
-
 
     xml_folder = config_obj["data_dir"] + "medline_xml"
     if os.path.isdir(xml_folder) == False:
@@ -23,7 +20,6 @@ def main():
 
     zeros = "0000000"
     cat_list = ["baseline", "updatefiles"]
-    #cat_list = ["updatefiles"]
     for category in cat_list:
         start = doc[category]["start"]
         end = doc[category]["end"]
@@ -34,15 +30,15 @@ def main():
             idx = zeros[:padlen] + str(idx)
             file_name = "pubmed%sn%s.xml.gz" % (year, idx)
             out_file_one = xml_folder + "/" + file_name
-            cmd = "wget %s%s -O %s" % (ftp_url, file_name, out_file_one)
-            x = subprocess.getoutput(cmd)
+            #cmd = "wget %s%s -O %s" % (ftp_url, file_name, out_file_one)
+            cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file_one)
+            #x = subprocess.getoutput(cmd)
             #print (cmd)
-        
-
 
     cmd = "chmod -R 777 " + xml_folder
     x = subprocess.getoutput(cmd)
 
+    return
 
 
 if __name__ == '__main__':

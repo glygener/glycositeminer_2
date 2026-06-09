@@ -9,21 +9,14 @@ def main():
 
     global config_obj
     config_obj = json.loads(open("conf/config.json", "r").read())
-    if config_obj["mode"] == "dev":
-        config_obj["rel_dir"], config_obj["misc_dir"] = "reldir/", "miscdir/" 
 
     source = "gene_info"
     # create dir if doesn't exist    
-    if os.path.isdir(config_obj["rel_dir"] + source) == False:
-        cmd = "mkdir -p " + config_obj["rel_dir"] + source
+    if os.path.isdir(config_obj["data_dir"] + source) == False:
+        cmd = "mkdir -p " + config_obj["data_dir"] + source
         x = subprocess.getoutput(cmd)
 
-
-
-    out_file = config_obj["rel_dir"] + "glygen/species_info.csv"
-    url = "https://data.glygen.org/ln2data/releases/data/current/misc/species_info.csv"
-    cmd = "wget %s -O %s --no-check-certificate" % (url, out_file)
-    x = subprocess.getoutput(cmd)
+    out_file = config_obj["data_dir"] + "glygen/species_info.csv"
     tax_id_dict = {}
     with open (out_file, "r") as FR:
         for line in FR:
@@ -33,15 +26,15 @@ def main():
 
     url = "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/All_Data.gene_info.gz"
     
-    out_file = config_obj["rel_dir"] + "gene_info/tmp.gene_info.gz"
-    cmd = "wget %s -O %s " % (url, out_file)
+    out_file = config_obj["data_dir"] + "gene_info/tmp.gene_info.gz"
+    cmd = "curl %s -o %s " % (url, out_file)
     x = subprocess.getoutput(cmd)
     cmd = "gunzip " + out_file
     x = subprocess.getoutput(cmd)
 
 
-    in_file = config_obj["rel_dir"] + "gene_info/tmp.gene_info"
-    out_file = config_obj["rel_dir"] + "gene_info/All_Data.gene_info"
+    in_file = config_obj["data_dir"] + "gene_info/tmp.gene_info"
+    out_file = config_obj["data_dir"] + "gene_info/All_Data.gene_info"
     
     FW = open(out_file, "w") 
     with open (in_file, "r") as FR:
@@ -51,7 +44,7 @@ def main():
                 FW.write(line)
     FW.close()
 
-    cmd = "chmod -R 777 " + config_obj["rel_dir"] + "/" + source
+    cmd = "chmod -R 777 " + config_obj["data_dir"] + "/" + source
     x = subprocess.getoutput(cmd)
    
 

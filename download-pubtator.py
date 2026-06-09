@@ -9,9 +9,6 @@ def main():
 
     global config_obj
     config_obj = json.loads(open("conf/config.json", "r").read())
-    if config_obj["mode"] == "dev":
-        config_obj["data_dir"], config_obj["misc_dir"] = "reldir/", "miscdir/"
-
    
  
     source = "pubtator_downloads"
@@ -21,23 +18,26 @@ def main():
         x = subprocess.getoutput(cmd)
 
 
-    #bioconcepts2pubtatorcentral.offset is an archive with titles/abstracts and the annotations in full texts. 
-    out_file = config_obj["data_dir"] + "/" + source + "/bioconcepts2pubtatorcentral.offset.gz"
-    cmd = "wget https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/bioconcepts2pubtatorcentral.offset.gz "
-    cmd += "-O %s" % (out_file)           
-    x = subprocess.getoutput(cmd)
-    #print (cmd)
+    base_url = "https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/"
 
-    #bioconcepts2pubtatorcental is a combination of all entity annotations in PubTatorCentral [1]. 
-    out_file = config_obj["data_dir"] + "/" + source + "/bioconcepts2pubtatorcentral.gz"
-    cmd = "wget https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/bioconcepts2pubtatorcentral.gz "
-    cmd += "-O %s" % (out_file)
-    x = subprocess.getoutput(cmd)
+    file_name = "bioconcepts2pubtatorcentral.offset.gz"
+    out_file = config_obj["data_dir"] + "/" + source + "/" + file_name
+    #cmd = "wget %s/%s -O %s" % (base_url, file_name, out_file)
+    cmd = "curl %s/%s -o %s" % (base_url, file_name, out_file)
     #print (cmd)
+    x = subprocess.getoutput(cmd)
 
+    file_name = "bioconcepts2pubtatorcentral.gz"
+    out_file = config_obj["data_dir"] + "/" + source + "/" + file_name
+    #cmd = "wget %s/%s -O %s" % (base_url, file_name, out_file)
+    cmd = "curl %s/%s -o %s" % (base_url, file_name, out_file)
+    #print (cmd)
+    x = subprocess.getoutput(cmd)
 
     cmd = "chmod -R 777 " + config_obj["data_dir"] + "/" + source
     x = subprocess.getoutput(cmd)
+
+    return
 
 
 

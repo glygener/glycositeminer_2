@@ -18,18 +18,10 @@ def main():
         x = subprocess.getoutput(cmd)
 
 
-    base_url = "https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/"
+    base_url = "https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTator3/"
 
-    file_name = "bioconcepts2pubtatorcentral.offset.gz"
+    file_name = "bioconcepts2pubtator3.gz"
     out_file = config_obj["data_dir"] + "/" + source + "/" + file_name
-    #cmd = "wget %s/%s -O %s" % (base_url, file_name, out_file)
-    cmd = "curl %s/%s -o %s" % (base_url, file_name, out_file)
-    #print (cmd)
-    x = subprocess.getoutput(cmd)
-
-    file_name = "bioconcepts2pubtatorcentral.gz"
-    out_file = config_obj["data_dir"] + "/" + source + "/" + file_name
-    #cmd = "wget %s/%s -O %s" % (base_url, file_name, out_file)
     cmd = "curl %s/%s -o %s" % (base_url, file_name, out_file)
     #print (cmd)
     x = subprocess.getoutput(cmd)

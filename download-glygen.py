@@ -51,7 +51,8 @@ def main():
             x = subprocess.getoutput(cmd)
             cmd = "grep uniprotkb_canonical_ac %s |wc " % (out_file)
             x = subprocess.getoutput(cmd)
-            if x.strip().split(" ")[0] == "":
+            parts = x.strip().split(" ")
+            if x.strip().split(" ")[0] == "0":
                 cmd = "rm -f %s" % (out_file)
                 x = subprocess.getoutput(cmd)
  

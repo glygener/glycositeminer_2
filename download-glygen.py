@@ -49,9 +49,12 @@ def main():
             out_file = config_obj["data_dir"] + "glygen/%s" % (file_name)
             cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
             x = subprocess.getoutput(cmd)
-            cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
-            #print (cmd)   
-    
+            cmd = "grep uniprotkb_canonical_ac %s |wc " % (out_file)
+            x = subprocess.getoutput(cmd)
+            if x.strip().split(" ")[0] == "":
+                cmd = "rm -f %s" % (out_file)
+                x = subprocess.getoutput(cmd)
+ 
     for ds in ds_list:
         for sp in sp_list:
             file_name = "%s_protein_%s" % (sp, ds)
@@ -59,12 +62,6 @@ def main():
             cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
             x = subprocess.getoutput(cmd)
             cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
-            #print (cmd)
-            cmd = "grep uniprotkb_canonical_ac %s |wc " % (out_file)
-            x = subprocess.getoutput(cmd)
-            if x.strip().split(" ")[0] == "":
-                cmd = "rm -f %s" % (out_file)
-                x = subprocess.getoutput(cmd)
 
 
  

@@ -31,6 +31,14 @@ in conf/medline.json should be:
 ```	
 The "updatefiles" section should be updated in the same manner by going to 
 https://ftp.ncbi.nlm.nih.gov/pubmed/updatefiles/
+
+### Step-2: Extract known sites
+The following script creates data_dir/glygen/known_sites.csv which
+contains known glycosylation sites assuming XX_proteoform_glycosylation_sites?.csv
+datasets are created downloaded under data_dir/glygen/.
+```
+$ nohup python3 extract-known-sites.py &
+```
 	
 
 

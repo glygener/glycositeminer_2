@@ -2,10 +2,7 @@ import sys
 import string
 import json
 import subprocess
-import util
 import glob
-import re
-from optparse import OptionParser
 
 
 

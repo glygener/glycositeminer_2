@@ -60,6 +60,11 @@ def main():
             x = subprocess.getoutput(cmd)
             cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
             #print (cmd)
+            cmd = "grep uniprotkb_canonical_ac %s |wc " % (out_file)
+            x = subprocess.getoutput(cmd)
+            if x.strip().split(" ")[0] == "":
+                cmd = "rm -f %s" % (out_file)
+                x = subprocess.getoutput(cmd)
 
 
  

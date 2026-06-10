@@ -8,7 +8,7 @@ import glob
 
 def main():
 
-    
+   
     config_obj = json.loads(open("conf/config.json", "r").read())
     
     glygen_dir = config_obj["data_dir"] + "glygen/"

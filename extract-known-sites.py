@@ -14,14 +14,14 @@ def main():
     
     config_obj = json.loads(open("conf/config.json", "r").read())
     
-    in_dir = "/data/projects/glygen/generated/datasets/unreviewed/"
-    file_list = glob.glob(config_obj["data_dir"]+"glygen/*_proteoform_glycosylation_sites_*.csv")
+    glygen_dir = config_obj["data_dir"] + "glygen/"
+    file_list = glob.glob(glygen_dir+"*_proteoform_glycosylation_sites_*.csv")
     if file_list == []:
         print ("\n\tNo *_proteoform_glycosylation_sites_*.csv found under %s" % (in_dir))
         exit()
 
 
-    out_file = config_obj["data_dir"]  + "/glygen/known_sites.csv"
+    out_file = glygen_dir + "known_sites.csv"
     FW = open(out_file, "w") 
     newrow = ["doc_id","canon","pos","amino_acid","source"]
     FW.write("\"%s\"\n" % ("\",\"".join(newrow)))
@@ -29,17 +29,7 @@ def main():
     row_list = []
     seen = {}        
     for in_file in file_list:
-        if in_file.find(".stat.csv") != -1:
-            continue
         file_name = in_file.split("/")[-1]
-        flag = False
-        for kw in ["predicted"]:
-            if file_name.find(kw) != -1:
-                flag = True
-        if flag:
-            continue
-        #print (file_name.split("proteoform_")[1])
-        #continue
         lcount = 0
         f_list = []
         with open(in_file, "r") as FR:
@@ -74,7 +64,7 @@ def main():
 
 
     
-    cmd = "chmod -R 777 " + config_obj["data_dir"] + "/glygen"
+    cmd = "chmod -R 777 %s" % (glygen_dir)
     x = subprocess.getoutput(cmd)
 
 

@@ -27,8 +27,6 @@ def main():
     #tax_id,short_name,long_name,common_name,glygen_name,nt_file,is_reference,sort_order
 
 
-    glygen_dir = "/data/projects/glygen/generated/"
-
     glygen_rel = config_obj["glygen_rel"] 
     out_file = config_obj["data_dir"] + "glygen/species_info.csv"
     ftp_url = "https://data.glygen.org/ln2releases/data/v-%s/misc/species_info.csv" % (glygen_rel)
@@ -43,6 +41,17 @@ def main():
 
 
     ftp_url = "https://data.glygen.org/ln2releases/data/v-%s/reviewed/" % (glygen_rel)
+    
+
+    for src in config_obj["glygen_src_list"]:
+        for sp in sp_list:
+            file_name = "%s_proteoform_glycosylation_sites_%s.csv" % (sp, src)
+            out_file = config_obj["data_dir"] + "glygen/%s" % (file_name)
+            cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
+            x = subprocess.getoutput(cmd)
+            cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
+            #print (cmd)   
+    
     for ds in ds_list:
         for sp in sp_list:
             file_name = "%s_protein_%s" % (sp, ds)
@@ -51,7 +60,9 @@ def main():
             x = subprocess.getoutput(cmd)
             cmd = "curl %s%s -o %s" % (ftp_url, file_name, out_file)
             #print (cmd)
-    
+
+
+ 
     cmd = "chmod -R 777 " + config_obj["data_dir"] + "/" + source
     x = subprocess.getoutput(cmd)
 

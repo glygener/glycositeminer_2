@@ -14,7 +14,7 @@ def main():
     glygen_dir = config_obj["data_dir"] + "glygen/"
     file_list = glob.glob(glygen_dir+"*_proteoform_glycosylation_sites_*.csv")
     if file_list == []:
-        print ("\n\tNo *_proteoform_glycosylation_sites_*.csv found under %s" % (in_dir))
+        print ("\n\tNo *_proteoform_glycosylation_sites_*.csv found under %s" % (glygen_dir))
         exit()
 
 

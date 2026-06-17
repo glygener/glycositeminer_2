@@ -1,0 +1,11 @@
+[
+    { "pattern": [{"LOWER": "acetylation"}], "label": "ACETYLATION" },
+    { "pattern": [{"LOWER": "acetylated"}], "label": "ACETYLATION" },
+    { "pattern": [{"LOWER": "acetylate"}], "label": "ACETYLATION" },
+    { "pattern": [{"LOWER": "acetylates"}], "label": "ACETYLATION" },
+    { "pattern": [{"LOWER": "acetylating"}], "label": "ACETYLATION" },
+    { "pattern": [{"LOWER": "hyperacetylation"}], "label": "ACETYLATION" },
+    { "pattern": [{"LOWER": "hypoacetylation"}], "label": "ACETYLATION" },
+    { "pattern": [{"LOWER": "lysine"}, {"LOWER": "acetylation"}], "label": "ACETYLATION" }
+]
+

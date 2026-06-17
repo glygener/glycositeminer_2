@@ -1,0 +1,35 @@
+[
+    { "pattern": [{"LOWER": "glycan"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "glycans"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "glycosylation"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "glycosylated"}], "label": "GLYCOSYLATION" },
+
+    { "pattern": [{"LOWER": "n"}, {"ORTH": "-"}, {"LOWER": "glycan"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "n"}, {"ORTH": "-"}, {"LOWER": "glycans"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "n"}, {"ORTH": "-"}, {"LOWER": "glycosylation"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "n"}, {"ORTH": "-"}, {"LOWER": "glycosylated"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "n"}, {"ORTH": "-"}, {"LOWER": "linked"}], "label": "GLYCOSYLATION" },
+
+    { "pattern": [{"LOWER": "o"}, {"ORTH": "-"}, {"LOWER": "glycan"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "o"}, {"ORTH": "-"}, {"LOWER": "glycans"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "o"}, {"ORTH": "-"}, {"LOWER": "glycosylation"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "o"}, {"ORTH": "-"}, {"LOWER": "glycosylated"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "o"}, {"ORTH": "-"}, {"LOWER": "linked"}], "label": "GLYCOSYLATION" },
+
+    { "pattern": [{"LOWER": "glycoprotein"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "glycoproteins"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "glycopeptide"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "glycopeptides"}], "label": "GLYCOSYLATION" },
+
+    { "pattern": [{"LOWER": "glcnac"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "glcnacylation"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "glcnacylated"}], "label": "GLYCOSYLATION" },
+
+    { "pattern": [{"LOWER": "fucosylation"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "fucosylated"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "fucosyltransferase"}], "label": "GLYCOSYLATION" },
+
+    { "pattern": [{"LOWER": "oligosaccharide"}], "label": "GLYCOSYLATION" },
+    { "pattern": [{"LOWER": "oligosaccharides"}], "label": "GLYCOSYLATION" }
+]
+

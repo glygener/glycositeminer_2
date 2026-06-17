@@ -1,0 +1,19 @@
+{
+	"9606":["human","Homo sapiens"],
+   "10090":["mouse","Mus musculus"],
+   "10116":["rat","Rattus norvegicus"],
+   "9823":["pig","Sus scrofa"],
+   "9031":["chicken","Gallus gallus"],
+   "7227":["fruitfly","Drosophila melanogaster", "Fruit fly"],
+   "559292":["yeast","Saccharomyces cerevisiae", "Baker's yeast"],
+   "44689":["dicty","Dictyostelium discoideum", "Social amoeba", "Cellular slime mold"],
+   "63746":["hcv1a","Hepatitis C virus", "HCV", "HCV-H77"],
+   "11116":["hcv1b","Hepatitis C virus", "HCV", "HCV-Japanese"],
+   "694009":["sarscov1","Severe acute respiratory syndrome", "SARS-CoV", "HCoV-SARS", "sars coronavirus"],
+   "2697049":["sarscov2","Severe acute respiratory syndrome coronavirus", "2019-nCoV", "SARS-CoV-2", "sars coronavirus"],
+   "3702":["arabidopsis","Arabidopsis thaliana", "Mouse-ear cress"],
+	"9913":["bovine", "Bos taurus"],
+	"10029":["hamster", "Cricetulus griseus", "Chinese hamster"],
+	"7955":["zebrafish", "Danio rerio"]
+}
+

@@ -39,6 +39,37 @@ datasets are created downloaded under data_dir/glygen/.
 ```
 $ nohup python3 extract-known-sites.py &
 ```
+
+
+### Step-3: Processing medline downloads
+The following script is a wrapper around "extract-medline-data.py" for extracting
+data from downloaded medline abstracts in xml format.
+```
+$ nohup python3 wrap-extract-medline-data.py &
+
+Input:
+	data_dir/medline_xml/*
+	misc/glyco.json
+
+Output:
+	data_dir/medline_extracts/*
+	data_dir/medline_abstracts/*
+	data_dir/logs/medline_abstracts.%s.%s.log
+```
+
+
+### Step-4: Processing pubtator downloads
+```	
+$ nohup python3 extract-pubtator-data.py &
+  
+Input:
+	data_dir/pubtator_downloads/bioconcepts2pubtatorcentral.offset.gz
+
+Output:
+	data_dir/pubtator_extracts/*
+	data_dir/logs/pubtator_extracts.log
+```
+
 	
 
 

@@ -1,0 +1,44 @@
+[
+    { "pattern": [{"LOWER": "phosphorylation"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphorylated"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphorylate"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphorylates"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "dephosphorylation"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "dephosphorylated"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "phosphoprotein"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphoproteins"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphopeptide"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphopeptides"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "phosphoserine"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphothreonine"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphotyrosine"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "serine"}, {"LOWER": "phosphorylation"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "threonine"}, {"LOWER": "phosphorylation"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "tyrosine"}, {"LOWER": "phosphorylation"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "ser"}, {"LOWER": "phosphorylation"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "thr"}, {"LOWER": "phosphorylation"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "tyr"}, {"LOWER": "phosphorylation"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "protein"}, {"LOWER": "phosphorylation"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "kinase"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "kinases"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphatase"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phosphatases"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "phospho"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "p"}, {"ORTH": "-"}, {"LOWER": "ser"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "p"}, {"ORTH": "-"}, {"LOWER": "thr"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "p"}, {"ORTH": "-"}, {"LOWER": "tyr"}], "label": "PHOSPHORYLATION" },
+
+    { "pattern": [{"LOWER": "phospho"}, {"ORTH": "-"}, {"LOWER": "ser"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phospho"}, {"ORTH": "-"}, {"LOWER": "thr"}], "label": "PHOSPHORYLATION" },
+    { "pattern": [{"LOWER": "phospho"}, {"ORTH": "-"}, {"LOWER": "tyr"}], "label": "PHOSPHORYLATION" }
+]
+

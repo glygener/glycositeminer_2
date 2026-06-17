@@ -1,0 +1,1226 @@
+[
+    {
+        "pattern": [
+            {
+                "LOWER": "a"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "ala"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "alanine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "c"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "cys"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "cysteine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "d"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "asp"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "aspartic acid"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "e"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "glu"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "glutamic acid"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "f"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "phe"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "phenylalanine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "g"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "gly"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "glycine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "h"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "his"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "histidine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "i"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "ile"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "isoleucine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "k"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "lys"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "lysine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "l"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "leu"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "leucine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "m"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "met"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "methionine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "n"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "asn"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "asparagine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "p"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "pro"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "proline"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "q"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "gln"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "glutamine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "r"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "arg"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "arginine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "s"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "ser"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "serine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "t"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "thr"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "threonine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "v"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "val"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "valine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "w"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "trp"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "tryptophan"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "y"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "tyr"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": [
+            {
+                "LOWER": "tyrosine"
+            },
+            {
+                "ORTH": "-"
+            },
+            {
+                "IS_DIGIT": true
+            }
+        ],
+        "label": "SITE"
+    },
+    {
+        "pattern": "glycosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "glycosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "glycosylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "glycosylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "N-glycosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-glycosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "N-glycosylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-glycosylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "N-glycan",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-glycan",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "N-glycans",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-glycans",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "N-linked",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-linked",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "N-Linked",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-linked",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-glycosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glycosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-glycosylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glycosylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-glycan",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glycan",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-glycans",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glycans",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-linked",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-linked",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-Linked",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-linked",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "glycan",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "glycan",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "N-glycopeptides",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-glycopeptides",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "N-glycoproteins",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-glycoproteins",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "N-glycosidic",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-glycosidic",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-oligosaccharide",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-oligosaccharide",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-oligosaccharides",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "n-oligosaccharides",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-fuco-oligomers",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-fuco-oligomers",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-fucosidically",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-fucosidically",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-fucosylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-fucosylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-fucosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-fucosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-Fucosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-fucosylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-fucosyltransferase",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-fucosyltransferase",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-fuco-xylo-glucurono-mannan",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-fuco-xylo-glucurono-mannan",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-galloyl-beta-d-Glucose",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-galloyl-beta-d-glucose",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-galloyl-beta-D-glucose",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-galloyl-beta-d-glucose",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAc",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnac",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAc-Akt1",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnac-akt1",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAcase",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnacase",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAc-deficient",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnac-deficient",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAc-dependent",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnac-dependent",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAc-modification",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnac-modification",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAc-modified",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnac-modified",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAc-modifies",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnac-modifies",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAc-occupied",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnac-occupied",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAc/phosphate",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnac/phosphate",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAcylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnacylated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAcylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnacylation",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAcylation-defective",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnacylation-defective",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAcylation-dependent",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnacylation-dependent",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAcylationmediated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnacylationmediated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-GlcNAcylation-mediated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glcnacylation-mediated",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-glycosidic",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glycosidic",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-glycosidically",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-glycosidically",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "O-\u03b2-linked",
+        "label": "GLYCOSYLATION"
+    },
+    {
+        "pattern": "o-\u03b2-linked",
+        "label": "GLYCOSYLATION"
+    }
+]

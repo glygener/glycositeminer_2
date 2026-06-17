@@ -1,0 +1,51 @@
+[
+    { "pattern": [{"LOWER": "a"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "ala"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "alanine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "c"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "cys"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "cysteine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "d"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "asp"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "aspartic"}, {"LOWER": "acid"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "e"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "glu"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "glutamic"}, {"LOWER": "acid"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "f"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "phe"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "phenylalanine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "g"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "gly"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "glycine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "h"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "his"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "histidine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "k"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "lys"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "lysine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "n"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "asn"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "asparagine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "s"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "ser"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "serine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "t"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "thr"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "threonine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+
+    { "pattern": [{"LOWER": "y"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "tyr"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" },
+    { "pattern": [{"LOWER": "tyrosine"}, {"ORTH": "-"}, {"IS_DIGIT": true}], "label": "SITE" }
+]
+
+

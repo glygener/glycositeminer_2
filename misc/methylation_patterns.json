@@ -1,0 +1,13 @@
+[
+    { "pattern": [{"LOWER": "methylation"}], "label": "METHYLATION" },
+    { "pattern": [{"LOWER": "methylated"}], "label": "METHYLATION" },
+    { "pattern": [{"LOWER": "methylate"}], "label": "METHYLATION" },
+    { "pattern": [{"LOWER": "methylates"}], "label": "METHYLATION" },
+    { "pattern": [{"LOWER": "methylating"}], "label": "METHYLATION" },
+    { "pattern": [{"LOWER": "trimethylation"}], "label": "METHYLATION" },
+    { "pattern": [{"LOWER": "dimethylation"}], "label": "METHYLATION" },
+    { "pattern": [{"LOWER": "monomethylation"}], "label": "METHYLATION" },
+    { "pattern": [{"LOWER": "lysine"}, {"LOWER": "methylation"}], "label": "METHYLATION" },
+    { "pattern": [{"LOWER": "arginine"}, {"LOWER": "methylation"}], "label": "METHYLATION" }
+]
+

@@ -1,0 +1,11 @@
+[
+    { "pattern": [{"LOWER": "ubiquitination"}], "label": "UBIQUITINATION" },
+    { "pattern": [{"LOWER": "ubiquitinated"}], "label": "UBIQUITINATION" },
+    { "pattern": [{"LOWER": "ubiquitinate"}], "label": "UBIQUITINATION" },
+    { "pattern": [{"LOWER": "ubiquitinates"}], "label": "UBIQUITINATION" },
+    { "pattern": [{"LOWER": "ubiquitinating"}], "label": "UBIQUITINATION" },
+    { "pattern": [{"LOWER": "polyubiquitination"}], "label": "UBIQUITINATION" },
+    { "pattern": [{"LOWER": "monoubiquitination"}], "label": "UBIQUITINATION" },
+    { "pattern": [{"LOWER": "ubiquitin"}, {"LOWER": "modification"}], "label": "UBIQUITINATION" }
+]
+

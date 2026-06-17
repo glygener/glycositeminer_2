@@ -1,0 +1,19 @@
+{
+	"9606":"human",
+   "10090":"mouse",
+   "10116":"rat",
+   "9823":"pig",
+   "9031":"chicken",
+   "7227":"fruit fly",
+   "559292":"yeast",
+   "44689":"dictyostelium discoideum",
+   "63746":"HCV",
+   "11116":"HCV",
+   "694009":"HCoV-SARS",
+   "2697049":"SARS-CoV-2",
+   "3702":"arabidopsis",
+	"9913":"bovine",
+	"10029":"chinese hamster",
+	"7955":"zebrafish"
+}
+

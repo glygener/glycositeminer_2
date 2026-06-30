@@ -1,5 +1,6 @@
 {
 	"data_dir":"data/",
+	"misc_dir":"misc/",
 	"glygen_rel":"2.11.1",
 	"gene_info":{
 		"Mammalia":[

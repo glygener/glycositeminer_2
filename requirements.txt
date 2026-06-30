@@ -1,0 +1,5 @@
+numpy
+pubmed_parser
+requests
+spacy
+openai

@@ -22,7 +22,6 @@ def main():
     global config_obj
     config_obj = json.loads(open("conf/config.json", "r").read())
 
-
     DEBUG = False
     #DEBUG = True
 

@@ -36,6 +36,8 @@ def main():
                     f_list = line.strip().replace("\"", "").split(",")
                 else:
                     row = line.strip().split("\",\"")
+                    if len(row) != len(f_list):
+                        continue
                     canon = row[f_list.index("uniprotkb_canonical_ac")].replace("\"", "")
                     xref_key = row[f_list.index("xref_key")].replace("\"", "")
                     xref_id = row[f_list.index("xref_id")].replace("\"", "")

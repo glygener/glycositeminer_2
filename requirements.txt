@@ -3,3 +3,4 @@ pubmed_parser
 requests
 spacy
 openai
+click

@@ -21,7 +21,7 @@ def main():
     with open (out_file, "r") as FR:
         for line in FR:
             row = line.strip().split(",")
-            if row[-2] == "yes":
+            if row[-3] == "yes":
                 tax_id_dict[row[0].strip()] = True
 
     url = "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/All_Data.gene_info.gz"

@@ -17,8 +17,8 @@ def main():
 
 
     config_obj = json.loads(open("conf/config.json", "r").read())
- 
-    gz_file = config_obj["data_dir"] + "pubtator_downloads/bioconcepts2pubtatorcentral.offset.gz"
+
+    gz_file = config_obj["data_dir"] + "pubtator_downloads/bioconcepts2pubtator3.gz"
     medline_abstracts_dir = config_obj["data_dir"] + "medline_abstracts/"
     pubtator_extracts_dir = config_obj["data_dir"] + "pubtator_extracts/"
     log_file = config_obj["data_dir"] + "logs/pubtator_extracts.log"

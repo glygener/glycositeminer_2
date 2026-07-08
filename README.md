@@ -22,7 +22,18 @@ $ nohup python3 download-glygen.py &
 $ nohup python3 download-medline.py &
 $ nohup python3 download-pubtator.py &
 $ nohup python3 download-gene-info.py &
+$ nohup python3 download-llm-entities.py &
+
+Output stats:
+	175 $data_dir/glygen/* file(s)
+ 	 31 $data_dir/medline_xml/* file(s)
+  	  1 $data_dir/pubtator_downloads/* file(s) -- around 5.7G
+  	  2 $data_dir/gene_info/* file(s)
+   148 $data_dir/llm_entities/1/* file(s)
+	148 $data_dir/llm_entities/2/* file(s)
+	148 $data_dir/llm_entities/3/* file(s)	
 ```
+
 The download-medline.py script depends on the file conf/medline.json which needs
 to be edited. To adjust the values for the "baseline" section, go to 
 https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/ and see the indexes of the 
@@ -48,6 +59,9 @@ contains known glycosylation sites assuming XX_proteoform_glycosylation_sites?.c
 datasets are created downloaded under data_dir/glygen/.
 ```
 $ nohup python3 extract-known-sites.py &
+
+Output Stats:
+	1 data_dir/glygen/known_sites.csv
 ```
 
 
@@ -62,10 +76,17 @@ Input:
 	misc/glyco.json
 
 Output:
-	data_dir/medline_extracts/*
-	data_dir/medline_abstracts/*
+	data_dir/medline_extracts/* 
+	data_dir/medline_abstracts/* 
 	data_dir/logs/medline_abstracts.%s.%s.log
+
+Output stats:
+	148 data_dir/medline_extracts/* file(s)
+	148 data_dir/medline_abstracts/* file(s)
+
 ```
+
+
 
 
 ### Step-4: Processing pubtator downloads
@@ -78,9 +99,13 @@ Input:
 Output:
 	data_dir/pubtator_extracts/*
 	data_dir/logs/pubtator_extracts.log
+
+Output stats:
+   149 data_dir/pubtator_extracts/ file(s)
 ```
 
-### Step-5: Making LLM API calls
+
+### Step-5-optional: Making LLM API calls
 This step uses openai.com API to extract species, gene, site entities from
 abstracts in data_dir/medline_abstracts/ and writes out entities JSON
 files under data_dir/llm_entities/$BATCH/ where $BATCH is batch index (1, 2, 3).

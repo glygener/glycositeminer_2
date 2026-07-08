@@ -23,6 +23,8 @@ $ nohup python3 download-medline.py &
 $ nohup python3 download-pubtator.py &
 $ nohup python3 download-gene-info.py &
 $ nohup python3 download-llm-entities.py &
+$ nohup python3 download-models.py &
+$ nohup python3 download-misc.py &
 
 Output stats:
 	175 $data_dir/glygen/* file(s)
@@ -32,6 +34,8 @@ Output stats:
    148 $data_dir/llm_entities/1/* file(s)
 	148 $data_dir/llm_entities/2/* file(s)
 	148 $data_dir/llm_entities/3/* file(s)	
+     6 $data_dir/models/* file(s)
+	 12 $data_dir/misc/* file(s)
 ```
 
 The download-medline.py script depends on the file conf/medline.json which needs

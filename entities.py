@@ -23,7 +23,7 @@ def dump_pubtator_entities(doc_id, base_dir):
     gene_obj_list = []
     species_obj_list = []
     in_file = base_dir + "pubtator_extracts/pmid.%s.txt" % (doc_id)
-    print (in_file, os.path.isfile(in_file))
+    #print (in_file, os.path.isfile(in_file))
 
     if os.path.isfile(in_file) == False:
         return

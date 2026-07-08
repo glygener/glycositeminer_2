@@ -38,9 +38,11 @@ def main():
     
     FW = open(out_file, "w") 
     with open (in_file, "r") as FR:
+        idx = 0
         for line in FR:
+            idx += 1
             tax_id = line.split("\t")[0].strip()
-            if tax_id in tax_id_dict:
+            if idx == 1 or tax_id in tax_id_dict:
                 FW.write(line)
     FW.close()
 

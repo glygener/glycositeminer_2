@@ -25,7 +25,7 @@ $ nohup python3 download-gene-info.py &
 $ nohup python3 download-llm-entities.py &
 $ nohup python3 download-models.py &
 $ nohup python3 download-misc.py &
-
+$ nohup python3 download-confirmation.py &
 Output stats:
 	175 $data_dir/glygen/* file(s)
  	 31 $data_dir/medline_xml/* file(s)
@@ -36,6 +36,7 @@ Output stats:
 	148 $data_dir/llm_entities/3/* file(s)	
      6 $data_dir/models/* file(s)
 	 12 $data_dir/misc/* file(s)
+	  5 $data_dir/confirmation/* file(s)
 ```
 
 The download-medline.py script depends on the file conf/medline.json which needs
@@ -204,7 +205,8 @@ Output
 ```
 
 
-### Step-11: Generating LLM confirmations
+### Step-11-optional: Generating LLM confirmations
+This step uses openai.com API.
 ```		
 $ python3 generate-llm-confirmation.py
 Input
